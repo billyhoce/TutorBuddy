@@ -5,7 +5,7 @@ export default function SignIn() {
         <form
             action={async () => {
                 "use server"
-                await signIn("google")
+                await signIn("google", { callbackUrl: 'https://localhost:3000/dashboard' })
             }}
         >
             <button type="submit">Signin with Google</button>
